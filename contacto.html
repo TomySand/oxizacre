@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Contacto - Oxizacre</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/796040b74a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img id="logo" src="../images/logo.png">
+            <ul id="menu">
+                <li><a href="index.html">INICIO</a></li>
+                <li id="submenu-father"><a href="#">PRODUCTOS</a>
+                    <ul id="submenu">
+                        <li><a href="#">Vinos</a></li>
+                        <li><a href="#">Cervezas</a></li>
+                        <li><a href="#">Espumantes</a></li>
+                        <li><a href="#">Accesorios</a></li>
+                    </ul>
+                </li>
+                <li><a href="sucursales.html">SUCURSALES</a></li>
+                <li><a class="activo" href="contacto.html">CONTACTANOS</a></li>
+            </ul>
+            <div id="btn-container">
+                <i onclick="toggleMenu()" class="fa fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header-container">
+        <p>CONTACTO</p>
+        <p>Escribinos y te responderemos a la brevedad.</p>
+    </div>
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+            <li>
+                <label for="name">NOMBRE COMPLETO: </label>
+                <input type="text" id="name" name="user_name">
+            </li>
+            <li>
+                <label for="mail">E-MAIL:</label>
+                <input type="email" id="mail" name="user_mail">
+            </li>
+            <li>
+                <label for="mail">MOTIVO DEL MENSAJE:</label>
+                <select name="tipo-consulta" id="tipo-consulta">
+                <option value="Consulta">Consulta</option>
+                <option value="Trabajo">Trabajo</option>
+                <option value="Comercial">Comercial</option>
+                </select>
+            </li>
+            <li>
+                <label for="msg">MENSAJE:</label>
+                <textarea id="msg" name="user_msg"></textarea>
+            </li>
+            <li class="button">
+                <button type="submit">Enviar</button>
+            </li>
+        </ul>
+    </form>
+
+
+    <footer>
+        <ul>
+            <li>
+                <p>TIENDA</p>
+            </li>
+            <li><a href="#">Vinos</a></li>
+            <li><a href="#">Cervezas</a></li>
+            <li><a href="#">Espumantes</a></li>
+            <li><a href="#">Accesorios</a></li>
+        </ul>
+
+        <ul>
+            <li>
+                <p>OXIZACRE</p>
+            </li>
+            <li><a href="sucursales.html">Sucursales</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="#">Sobre nosotros</a></li>
+        </ul>
+
+        <ul>
+            <li>
+                <p>SEGUINOS EN:</p>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+                <p>© 2021, Oxizacre</p>
+            </li>
+
+    </footer>
+
+
+</body>
+
+</html>

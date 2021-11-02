@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&display=swap');
+
+/* || General styles */
+
+html {
+    box-sizing: border-box;
+    --main-font-color: #444444;
+    --header-footer-color: #8599dd;
+    --submenu-color: #b9c6f0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/*########
+HEADER STYLE START
+########*/
+
+header {
+    background-color: var(--header-footer-color);
+    border-bottom: solid 1px;
+    z-index: 4;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 2;
+    align-items: center;
+}
+
+#menu li {
+    font-size: 120%;
+    font-weight: 500;
+}
+
+#submenu {
+    display: none;
+}
+
+#submenu-father:hover #submenu {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: var(--submenu-color);
+    box-shadow: 0px 6px 10px 7px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+#submenu-father>#submenu>li {
+    padding: 0.5rem;
+    font-size: 80%;
+}
+
+#btn-container {
+    display: none;
+    z-index: 4;
+}
+
+.fa-bars {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+#logo {
+    width: 12rem;
+    height: 2rem;
+}
+
+.activo {
+    font-weight: 600;
+    font-size: 112%;
+}
+
+
+/*########
+DESTACADOS STYLE START
+########*/
+
+#destacados-container,
+.img-container,
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#destacados-container {
+    margin: 2rem;
+    row-gap: 2rem;
+}
+
+.producto-container {
+    flex: 0 0 25%;
+}
+
+.producto-container:hover {
+    border: solid 1px grey;
+}
+
+
+/*########
+SUCURSALES STYLE START
+########*/
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--submenu-color);
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Playfair Display", sans-serif;
+    color: var(--main-font-color);
+}
+
+.header-container p:nth-child(2) {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+#sucursales-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    justify-content: space-evenly;
+}
+
+.map-container {
+    background-color: var(--submenu-color);
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.map-txt {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #cfcfcf;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    transition: 1s;
+}
+
+.map-txt p:nth-child(2) {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.map-txt p:last-child {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.map-container:hover .map-txt {
+    background-color: #f0eeee;
+    box-shadow: 0px 6px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+/*########
+CONTACTO STYLE START
+########*/
+
+form {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+form ul {
+    background-color: rgb(226, 226, 226);
+    padding: 1.5rem;
+}
+
+form ul li {
+    padding: 1.5rem;
+}
+
+select {
+    padding: 0.7rem;
+    width: 100%;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 300px;
+}
+
+label {
+    font-weight: 600;
+}
+
+button {
+    width: 55%;
+    height: auto;
+    height: 4rem;
+    font-size: 1.5rem;
+    background-color: #92a8f0;
+    border: none;
+    color: white;
+}
+
+button:active {
+    background-color: #b9c6f0;
+}
+
+
+/*########
+FOOTER STYLE START
+########*/
+
+footer {
+    border-top: solid 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--header-footer-color);
+    width: 100%;
+}
+
+footer ul {
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+footer ul li:first-child {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+footer ul li:not(:first-child) {
+    padding-top: 0.7rem;
+    font-size: 1rem;
+}
+
+.fab {
+    font-size: 2rem;
+}
+
+.fa-whatsapp {
+    margin: 0rem 1rem 0rem 1rem;
+}
+
+.fa-facebook:hover {
+    color: #4267B2;
+    transition: 0.5s;
+}
+
+.fa-whatsapp:hover {
+    color: #33bc49;
+    transition: 0.5s;
+}
+
+.fa-instagram:hover {
+    color: #c2459a;
+    transition: 0.5s;
+}
+
+
+/*########
+FOOTER STYLE END
+########*/
+
+@media screen and (max-width:840px) {
+    #btn-container {
+        display: block;
+    }
+    #menu {
+        display: none;
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--submenu-color);
+        border-radius: 0 0 0 10px;
+        z-index: 3;
+        box-shadow: 0px 6px 10px 7px rgba(0, 0, 0, 0.25);
+    }
+    #menu li {
+        padding: 2rem;
+    }
+    #submenu-father:hover #submenu {
+        display: none;
+    }
+}
+
+@media screen and (max-width:440px) {
+    footer {
+        flex-direction: column-reverse;
+        align-items: center;
+        position: absolute;
+        bottom: -100;
+        width: 100%;
+        font-size: 4rem;
+    }
+}
